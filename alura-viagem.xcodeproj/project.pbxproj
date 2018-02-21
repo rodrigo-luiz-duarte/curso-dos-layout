@@ -14,6 +14,14 @@
 		5B432011203DE2F200A05A15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B43200F203DE2F200A05A15 /* LaunchScreen.storyboard */; };
 		5B43201C203DE2F200A05A15 /* alura_viagemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B43201B203DE2F200A05A15 /* alura_viagemTests.swift */; };
 		5B432027203DE2F300A05A15 /* alura_viagemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B432026203DE2F300A05A15 /* alura_viagemUITests.swift */; };
+		5B432035203DF43B00A05A15 /* ViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B432034203DF43A00A05A15 /* ViagemDAO.swift */; };
+		5B43203C203DF44700A05A15 /* img5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B432037203DF44700A05A15 /* img5.jpg */; };
+		5B43203D203DF44700A05A15 /* img4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B432038203DF44700A05A15 /* img4.jpg */; };
+		5B43203E203DF44700A05A15 /* img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B432039203DF44700A05A15 /* img3.jpg */; };
+		5B43203F203DF44700A05A15 /* img2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B43203A203DF44700A05A15 /* img2.jpg */; };
+		5B432040203DF44700A05A15 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B43203B203DF44700A05A15 /* img1.png */; };
+		5B432042203DF48B00A05A15 /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B432041203DF48B00A05A15 /* Viagem.swift */; };
+		5B432044203DF6D900A05A15 /* ViagemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B432043203DF6D900A05A15 /* ViagemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,14 @@
 		5B432022203DE2F300A05A15 /* alura-viagemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "alura-viagemUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B432026203DE2F300A05A15 /* alura_viagemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alura_viagemUITests.swift; sourceTree = "<group>"; };
 		5B432028203DE2F300A05A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B432034203DF43A00A05A15 /* ViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViagemDAO.swift; path = "alura-viagem/DAO/ViagemDAO.swift"; sourceTree = SOURCE_ROOT; };
+		5B432037203DF44700A05A15 /* img5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img5.jpg; sourceTree = "<group>"; };
+		5B432038203DF44700A05A15 /* img4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img4.jpg; sourceTree = "<group>"; };
+		5B432039203DF44700A05A15 /* img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.jpg; sourceTree = "<group>"; };
+		5B43203A203DF44700A05A15 /* img2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.jpg; sourceTree = "<group>"; };
+		5B43203B203DF44700A05A15 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
+		5B432041203DF48B00A05A15 /* Viagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
+		5B432043203DF6D900A05A15 /* ViagemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +113,11 @@
 		5B432005203DE2F200A05A15 /* alura-viagem */ = {
 			isa = PBXGroup;
 			children = (
+				5B432047203E01EC00A05A15 /* DAO */,
+				5B432046203E01E300A05A15 /* Model */,
+				5B432045203E01DA00A05A15 /* Home */,
+				5B432036203DF44700A05A15 /* Assets */,
 				5B432006203DE2F200A05A15 /* AppDelegate.swift */,
-				5B432008203DE2F200A05A15 /* ViewController.swift */,
 				5B43200A203DE2F200A05A15 /* Main.storyboard */,
 				5B43200D203DE2F200A05A15 /* Assets.xcassets */,
 				5B43200F203DE2F200A05A15 /* LaunchScreen.storyboard */,
@@ -123,6 +142,59 @@
 				5B432028203DE2F300A05A15 /* Info.plist */,
 			);
 			path = "alura-viagemUITests";
+			sourceTree = "<group>";
+		};
+		5B432036203DF44700A05A15 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5B432037203DF44700A05A15 /* img5.jpg */,
+				5B432038203DF44700A05A15 /* img4.jpg */,
+				5B432039203DF44700A05A15 /* img3.jpg */,
+				5B43203A203DF44700A05A15 /* img2.jpg */,
+				5B43203B203DF44700A05A15 /* img1.png */,
+			);
+			path = Assets;
+			sourceTree = SOURCE_ROOT;
+		};
+		5B432045203E01DA00A05A15 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B432048203E020600A05A15 /* Controller */,
+				5B432049203E020F00A05A15 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B432046203E01E300A05A15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B432041203DF48B00A05A15 /* Viagem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B432047203E01EC00A05A15 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				5B432034203DF43A00A05A15 /* ViagemDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		5B432048203E020600A05A15 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B432008203DE2F200A05A15 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B432049203E020F00A05A15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B432043203DF6D900A05A15 /* ViagemTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B432011203DE2F200A05A15 /* LaunchScreen.storyboard in Resources */,
+				5B432040203DF44700A05A15 /* img1.png in Resources */,
+				5B43203E203DF44700A05A15 /* img3.jpg in Resources */,
+				5B43203D203DF44700A05A15 /* img4.jpg in Resources */,
+				5B43203C203DF44700A05A15 /* img5.jpg in Resources */,
 				5B43200E203DE2F200A05A15 /* Assets.xcassets in Resources */,
 				5B43200C203DE2F200A05A15 /* Main.storyboard in Resources */,
+				5B43203F203DF44700A05A15 /* img2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +336,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B432042203DF48B00A05A15 /* Viagem.swift in Sources */,
+				5B432044203DF6D900A05A15 /* ViagemTableViewCell.swift in Sources */,
+				5B432035203DF43B00A05A15 /* ViagemDAO.swift in Sources */,
 				5B432009203DE2F200A05A15 /* ViewController.swift in Sources */,
 				5B432007203DE2F200A05A15 /* AppDelegate.swift in Sources */,
 			);
