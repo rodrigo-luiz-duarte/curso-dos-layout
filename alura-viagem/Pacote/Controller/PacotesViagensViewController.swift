@@ -21,7 +21,7 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.labelPacotesEncontrados.text = self.atuslizaLabelPacotesEncontrados()
     }
 
@@ -60,9 +60,10 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         listaViagens = listaComTodasViagens
         
         if (searchText != "") {
-            let filtroListaViagem = NSPredicate(format: "titulo contains %@", searchText)
-            let listaFiltrada:Array<Viagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array
+            let filtroListaViagem = NSPredicate(format: "titulo CONTAINS[cd] %@", searchText)
+            let listaFiltrada:Array<Viagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array<Viagem>
             listaViagens = listaFiltrada
+            print(listaFiltrada)
         }
         
         self.labelPacotesEncontrados.text = self.atuslizaLabelPacotesEncontrados()
@@ -76,5 +77,12 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         } else {
             return listaViagens.count == 1 ? "1 pacote encontrado" : "\(listaViagens.count) pacotes encontrados"
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "detalhes") as! DetalhePacoteViewController
+        self.present(controller, animated: true, completion: nil)
     }
 }

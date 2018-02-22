@@ -24,6 +24,7 @@
 		5B432044203DF6D900A05A15 /* ViagemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B432043203DF6D900A05A15 /* ViagemTableViewCell.swift */; };
 		5B609998203E5568009F6CC4 /* PacotesViagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B609997203E5568009F6CC4 /* PacotesViagensViewController.swift */; };
 		5B60999A203E5675009F6CC4 /* PacoteViagemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B609999203E5675009F6CC4 /* PacoteViagemCollectionViewCell.swift */; };
+		5B60999F203EF0E9009F6CC4 /* DetalhePacoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60999E203EF0E9009F6CC4 /* DetalhePacoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		5B432043203DF6D900A05A15 /* ViagemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemTableViewCell.swift; sourceTree = "<group>"; };
 		5B609997203E5568009F6CC4 /* PacotesViagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacotesViagensViewController.swift; sourceTree = "<group>"; };
 		5B609999203E5675009F6CC4 /* PacoteViagemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagemCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B60999E203EF0E9009F6CC4 /* DetalhePacoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhePacoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			children = (
 				5B609995203E5509009F6CC4 /* Controller */,
 				5B609996203E5512009F6CC4 /* View */,
+				5B60999B203EF087009F6CC4 /* Detalhe-Pacote */,
 			);
 			path = Pacote;
 			sourceTree = "<group>";
@@ -225,6 +228,30 @@
 				5B609999203E5675009F6CC4 /* PacoteViagemCollectionViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5B60999B203EF087009F6CC4 /* Detalhe-Pacote */ = {
+			isa = PBXGroup;
+			children = (
+				5B60999D203EF0BF009F6CC4 /* Controller */,
+				5B60999C203EF0B8009F6CC4 /* View */,
+			);
+			path = "Detalhe-Pacote";
+			sourceTree = "<group>";
+		};
+		5B60999C203EF0B8009F6CC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B60999D203EF0BF009F6CC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B60999E203EF0E9009F6CC4 /* DetalhePacoteViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +395,7 @@
 			files = (
 				5B432042203DF48B00A05A15 /* Viagem.swift in Sources */,
 				5B432044203DF6D900A05A15 /* ViagemTableViewCell.swift in Sources */,
+				5B60999F203EF0E9009F6CC4 /* DetalhePacoteViewController.swift in Sources */,
 				5B432035203DF43B00A05A15 /* ViagemDAO.swift in Sources */,
 				5B432009203DE2F200A05A15 /* ViewController.swift in Sources */,
 				5B609998203E5568009F6CC4 /* PacotesViagensViewController.swift in Sources */,
