@@ -16,12 +16,12 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak var searchBarPacotes: UISearchBar!
     @IBOutlet weak var labelPacotesEncontrados: UILabel!
     
-    let listaComTodasViagens:Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
-    var listaViagens:Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
+    let listaComTodasViagens:Array<PacoteViagem> = PacoteViagemDAO().retornaTodasAsViagens()
+    var listaViagens:Array<PacoteViagem> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.listaViagens = listaComTodasViagens
         self.labelPacotesEncontrados.text = self.atuslizaLabelPacotesEncontrados()
     }
 
@@ -37,15 +37,16 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celulaPacote = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaPacote", for: indexPath) as! PacoteViagemCollectionViewCell
         
-        let viagem = listaViagens[indexPath.row]
+        let pacoteAtual = listaViagens[indexPath.item]
         
-        celulaPacote.labelTitulo.text = viagem.titulo
-        celulaPacote.labelQuantidadeDeDias.text = "\(viagem.quantidadeDeDias) dias"
-        celulaPacote.labelPreco.text = "R$ \(viagem.preco)"
-        celulaPacote.imagemViagem.image = UIImage(named: viagem.caminhoDaImagem)
+        celulaPacote.labelTitulo.text = pacoteAtual.viagem.titulo
+        celulaPacote.labelQuantidadeDeDias.text = "\(pacoteAtual.viagem.quantidadeDeDias) dias"
+        celulaPacote.labelPreco.text = "R$ \(pacoteAtual.viagem.preco)"
+        celulaPacote.imagemViagem.image = UIImage(named: pacoteAtual.viagem.caminhoDaImagem)
+        
         celulaPacote.layer.borderWidth = 0.5
-        celulaPacote.layer.borderColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1).cgColor
-        celulaPacote.layer.cornerRadius = 10
+        celulaPacote.layer.borderColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor
+        celulaPacote.layer.cornerRadius = 8
         
         return celulaPacote
     }
@@ -60,8 +61,8 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         listaViagens = listaComTodasViagens
         
         if (searchText != "") {
-            let filtroListaViagem = NSPredicate(format: "titulo CONTAINS[cd] %@", searchText)
-            let listaFiltrada:Array<Viagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array<Viagem>
+            let filtroListaViagem = NSPredicate(format: "viagem.titulo CONTAINS[cd] %@", searchText)
+            let listaFiltrada:Array<PacoteViagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array<PacoteViagem>
             listaViagens = listaFiltrada
             print(listaFiltrada)
         }
