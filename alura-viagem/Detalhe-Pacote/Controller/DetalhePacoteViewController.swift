@@ -19,6 +19,7 @@ class DetalhePacoteViewController: UIViewController {
     @IBOutlet weak var labelDataViagem: UILabel!
     @IBOutlet weak var labelPrecoViagem: UILabel!
     @IBOutlet weak var scrollPrincipal: UIScrollView!
+    @IBOutlet weak var textFieldDataValidadeCartao: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +46,34 @@ class DetalhePacoteViewController: UIViewController {
     }
     
     @IBAction func btnVoltarClick(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        if let navigation = self.navigationController {
+            navigation.popViewController(animated: true)
+        }
     }
     
     @objc func aumentarScroll(notification: Notification) {
         self.scrollPrincipal.contentSize = CGSize(width: self.scrollPrincipal.frame.width, height: self.scrollPrincipal.frame.height + 320)
     }
+    
+    @IBAction func aoIniciarEdicaoDataValidade(_ sender: UITextField) {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        sender.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(exibeDataTextField(sender:)), for: .valueChanged)
+    }
+    
+    @objc func exibeDataTextField(sender: UIDatePicker) {
+        let formatador = DateFormatter()
+        formatador.dateFormat = "dd/MM/yyyy"
+        self.textFieldDataValidadeCartao.text = formatador.string(from: sender.date)
+    }
+    
+    @IBAction func btnFinalizarCompraClick(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "confirmacaoPagamento") as! ConfimacaoPagamentoViewController
+        controller.pacoteComprado = pacoteSelecionado
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }

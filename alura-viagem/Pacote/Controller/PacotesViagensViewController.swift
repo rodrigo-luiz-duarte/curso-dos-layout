@@ -85,6 +85,7 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "detalhes") as! DetalhePacoteViewController
         controller.pacoteSelecionado = pacote
-        self.present(controller, animated: true, completion: nil)
+        
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
